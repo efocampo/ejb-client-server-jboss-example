@@ -10,9 +10,14 @@ Desktop client built in maven that makes calls to a remote EJB implementation on
 - Copy the secret value, in my case: ``` <secret value="YXVkaXRvcmlhMSo=" /> ```
 - The file standalone.xml should be as follows:
   - Add new security-realm under security-reals section:
-           ``` <security-realm name="ejb-security-realm">   <br />
-                <server-identities> 
-                    <secret value="YXVkaXRvcmlhMSo="/>
-                </server-identities>
-            </security-realm>```
-  - sd
+           ![security-reals section](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/security-real.png)
+  - Set the security realm connection and port
+           ![security realm connection](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/connector.png)
+   ![port1](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/port.png) 
+  - Deployment log
+          ![deployment log](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/deployment.png)
+  -My standalone.xml
+ [standalone.xml](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/standalone.xml)
+ ## Client
+ - Execution output
+ ![Execution output](https://raw.githubusercontent.com/efocampo/ejb-client-server-jboss-example/main/server/files/clientExecution.png)
